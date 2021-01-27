@@ -10,12 +10,14 @@ import SwiftUI
 struct ContentView: View {
     @State private var isPresented = false
     var body: some View {
-        Button("Show Model") {
-            self.isPresented = true
-        }.sheet(isPresented: $isPresented) {
-            Text("This is the model sreen")
+        NavigationView {
+            Button("Show Model") {
+                self.isPresented = true
+            }.sheet(isPresented: $isPresented) {
+                ModelView()
+            }
+            .navigationTitle("XCode and Git")
         }
-            
     }
 }
 
