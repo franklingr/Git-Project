@@ -11,12 +11,9 @@ struct ContentView: View {
     @State private var isPresented = false
     var body: some View {
         NavigationView {
-            Button("Show Model") {
-                self.isPresented = true
-            }.foregroundColor(.red)
-            .sheet(isPresented: $isPresented) {
-                ModelView()
-            }
+            NavigationLink(destination: ModelView()) {
+                    Text("Go Next")
+                }
             .navigationTitle("XCode and Git")
         }
     }
