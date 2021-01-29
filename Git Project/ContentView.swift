@@ -13,7 +13,7 @@ struct ContentView: View {
         NavigationView {
             NavigationLink(destination: ModelView()) {
                     Text("Go Next")
-                        .foregroundColor(.red)
+                        .foregroundColor(.blue)
                 }
             .navigationTitle("XCode and Git")
         }
